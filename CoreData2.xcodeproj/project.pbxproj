@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		841CE48A28E5BEB600F59623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE48928E5BEB600F59623 /* AppDelegate.swift */; };
-		841CE48C28E5BEB600F59623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE48B28E5BEB600F59623 /* SceneDelegate.swift */; };
-		841CE48E28E5BEB600F59623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE48D28E5BEB600F59623 /* ViewController.swift */; };
+		841CE48E28E5BEB600F59623 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE48D28E5BEB600F59623 /* TaskListViewController.swift */; };
 		841CE49428E5BEB600F59623 /* CoreData2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841CE49228E5BEB600F59623 /* CoreData2.xcdatamodeld */; };
 		841CE49628E5BEBC00F59623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841CE49528E5BEBC00F59623 /* Assets.xcassets */; };
 		841CE49928E5BEBC00F59623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841CE49728E5BEBC00F59623 /* LaunchScreen.storyboard */; };
+		841CE4A128E6D99400F59623 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE4A028E6D99400F59623 /* TaskViewController.swift */; };
+		841CE4A328E6E0FD00F59623 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE4A228E6E0FD00F59623 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		841CE48628E5BEB600F59623 /* CoreData2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841CE48928E5BEB600F59623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		841CE48B28E5BEB600F59623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		841CE48D28E5BEB600F59623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		841CE48D28E5BEB600F59623 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		841CE49328E5BEB600F59623 /* CoreData2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData2.xcdatamodel; sourceTree = "<group>"; };
 		841CE49528E5BEBC00F59623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841CE49828E5BEBC00F59623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841CE49A28E5BEBC00F59623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841CE4A028E6D99400F59623 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		841CE4A228E6E0FD00F59623 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				841CE48928E5BEB600F59623 /* AppDelegate.swift */,
-				841CE48B28E5BEB600F59623 /* SceneDelegate.swift */,
-				841CE48D28E5BEB600F59623 /* ViewController.swift */,
+				841CE48D28E5BEB600F59623 /* TaskListViewController.swift */,
+				841CE4A228E6E0FD00F59623 /* CustomButton.swift */,
+				841CE4A028E6D99400F59623 /* TaskViewController.swift */,
 				841CE49528E5BEBC00F59623 /* Assets.xcassets */,
 				841CE49728E5BEBC00F59623 /* LaunchScreen.storyboard */,
 				841CE49A28E5BEBC00F59623 /* Info.plist */,
@@ -137,10 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CE48E28E5BEB600F59623 /* ViewController.swift in Sources */,
+				841CE48E28E5BEB600F59623 /* TaskListViewController.swift in Sources */,
+				841CE4A128E6D99400F59623 /* TaskViewController.swift in Sources */,
 				841CE48A28E5BEB600F59623 /* AppDelegate.swift in Sources */,
-				841CE48C28E5BEB600F59623 /* SceneDelegate.swift in Sources */,
 				841CE49428E5BEB600F59623 /* CoreData2.xcdatamodeld in Sources */,
+				841CE4A328E6E0FD00F59623 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +289,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,8 +316,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
