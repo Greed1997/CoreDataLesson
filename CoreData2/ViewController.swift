@@ -7,13 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
+    
+    private var textField: UITextField = {
+        let textField = UITextField()
+        return textField
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-
+    
 }
 
