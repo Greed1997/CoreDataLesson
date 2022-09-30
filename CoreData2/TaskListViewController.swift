@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TaskListViewController.swift
 //  CoreData2
 //
 //  Created by Александр on 29.09.2022.
@@ -7,12 +7,8 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class TaskListViewController: UITableViewController {
     
-    private var textField: UITextField = {
-        let textField = UITextField()
-        return textField
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
