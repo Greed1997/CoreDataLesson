@@ -14,6 +14,7 @@
 		841CE49928E5BEBC00F59623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841CE49728E5BEBC00F59623 /* LaunchScreen.storyboard */; };
 		841CE4A128E6D99400F59623 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE4A028E6D99400F59623 /* TaskViewController.swift */; };
 		841CE4A328E6E0FD00F59623 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE4A228E6E0FD00F59623 /* CustomButton.swift */; };
+		8453F6C128E711EA00157F32 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453F6C028E711EA00157F32 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		841CE49A28E5BEBC00F59623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841CE4A028E6D99400F59623 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		841CE4A228E6E0FD00F59623 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8453F6C028E711EA00157F32 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		841CE48828E5BEB600F59623 /* CoreData2 */ = {
 			isa = PBXGroup;
 			children = (
+				8453F6C028E711EA00157F32 /* StorageManager.swift */,
 				841CE48928E5BEB600F59623 /* AppDelegate.swift */,
 				841CE48D28E5BEB600F59623 /* TaskListViewController.swift */,
 				841CE4A228E6E0FD00F59623 /* CustomButton.swift */,
@@ -143,6 +146,7 @@
 				841CE48E28E5BEB600F59623 /* TaskListViewController.swift in Sources */,
 				841CE4A128E6D99400F59623 /* TaskViewController.swift in Sources */,
 				841CE48A28E5BEB600F59623 /* AppDelegate.swift in Sources */,
+				8453F6C128E711EA00157F32 /* StorageManager.swift in Sources */,
 				841CE49428E5BEB600F59623 /* CoreData2.xcdatamodeld in Sources */,
 				841CE4A328E6E0FD00F59623 /* CustomButton.swift in Sources */,
 			);

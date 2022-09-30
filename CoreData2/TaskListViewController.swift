@@ -53,9 +53,7 @@ class TaskListViewController: UITableViewController {
     }
     
     @objc private func addNewTask() {
-        let taskVC = TaskViewController()
-        taskVC.delegate = self
-        present(taskVC, animated: true)
+        showAlert(with: "New Task", and: "What do you want to do?")
     }
     private func fetchData() {
         let fetchRequest = TaskEntity.fetchRequest() // запрос к базе данных TaskEntity. Говорим базе: "Мы хотим получить объекты с типом TaskEntity"
@@ -64,6 +62,39 @@ class TaskListViewController: UITableViewController {
             taskList = try context.fetch(fetchRequest) // данные метод принимает запрос и суть этого запроса заключается в том, что в нем мы определяем тип данных, который нам нужно раздобыть из базы. На выходе получаем массив [TaskEntity]
         } catch let error {
             print("Failed to fetch data", error)
+        }
+    }
+    
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in // так как alertController содержит в себе массив текстовых полей, то мы просто можем извлечь из него текстовое поле
+            guard let task = alert.textFields?.first?.text, !task.isEmpty else { return }
+            self.save(task)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        alert.addTextField { textField in
+            textField.placeholder = "New Task"
+        }
+        present(alert, animated: true)
+    }
+    
+    private func save(_ taskName: String) {
+        guard let entityDescription = NSEntityDescription.entity(forEntityName: "TaskEntity", in: context) else { return }
+        guard let task = NSManagedObject(entity: entityDescription, insertInto: context) as? TaskEntity else { return }
+        task.title = taskName
+        taskList.append(task)
+        
+        let cellIndex = IndexPath(row: taskList.count - 1, section: 0) // индекс строки, по которой мы будем добавлять новую ячейку
+        tableView.insertRows(at: [cellIndex], with: .automatic) // добавление ячеек
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
 }
